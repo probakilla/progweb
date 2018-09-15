@@ -1,0 +1,27 @@
+#title
+{
+    font-family: "Arial", Verdana;
+    text-align: center;
+    font-size: 45px;
+    color: #FF1493
+}
+
+.sec_title
+{
+    font-family: "Gill Sans", sans-serif;
+    font-size: 40px;
+    color: #808080;
+    margin-left: 20px;
+}
+
+.sub_sec_title
+{
+    font-size: 20px;
+    margin-left: 75px;
+    margin-top: -40px;
+}
+
+.sec_paragraph
+{
+    margin-left: 100px;
+}
