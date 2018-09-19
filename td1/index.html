@@ -5,8 +5,8 @@
   <meta charset='utf-8' />
   <meta name='author' content='Julien' />
   <link rel='stylesheet' href='style.css'>
-  <link rel='stylesheet' href='bootstrap/css/bootstrap.css'>
   <script src='script.js' defer></script>
+  <link rel='stylesheet' href='bootstrap/css/bootstrap.css'>
   <title> Blog TD1 </title>
 </head>
 
@@ -15,13 +15,36 @@
   <nav class='navbar'>
     <a class='navbar-brand' id='blog-title'>Blog du SWAGG</a>
     <form class='form-inline my-2 my-lg-0'>
-      <button id='accueil-btn' class='btn btn-primary'>Accueil</button>
-      <button class='btn btn-link'>Les Ortolans</button>
-      <button class='btn btn-link'>LOUR SWAGG</button>
-      <button class='btn btn-link'>Jean Luc Reichmann</button>
-    </form>
-  </nav>
-  <hr class='separator'>
+      
+      <!-- BTN ACCUEIL -->
+      <button class='btn btn-primary' 
+      onclick="showAllPosts(); changeTitle ('Accueil'); return false;">
+      Accueil
+    </button>
+    
+    <!-- BTN ORTOLANS -->
+    <button class='btn btn-link'
+    onclick="
+    showAllPosts();
+    hideClassList(['swagg', 'jl']);
+    changeTitle('Les Ortolans'); return false;">Les Ortolans</button>
+    
+    <!-- BTN SWAGG -->
+    <button class='btn btn-link'
+    onclick="
+    showAllPosts();
+    hideClassList (['ortolan', 'jl']);
+    changeTitle('LOUR SWAGG'); return false;">LOUR SWAGG</button>
+    
+    <!-- BTN JEAN LUC REICHMANN -->
+    <button class='btn btn-link'
+    onclick="
+    showAllPosts();
+    hideClassList(['ortolan', 'swagg']);
+    changeTitle('Jean Luc Reichmann'); return false;">Jean Luc Reichmann</button>
+  </form>
+</nav>
+<hr class='separator'>
 </div>
 
 <div class='container'>
@@ -34,7 +57,7 @@
   <div class='row'>
     
     <!-- LES ORTOLANS -->
-    <div id='col-1' class='col-sm-4'>
+    <div id='ortolans-0' class='col-sm-4 post ortolan'>
       <h3 class='sec-title'>Les Ortolans</h3>
       <button type="button" class="btn btn-primary btn-sm">
         <div class="btn-font">Ortolans</div>
@@ -57,7 +80,7 @@
     </div>
     
     
-    <div class='col-sm-4'>
+    <div id='ortolans-1' class='col-sm-4 post ortolan'>
       <h3 class='sec-title'>Et on lui suce le derière</h3>
       <button type='button' class='btn btn-primary btn-sm'>
         <div class='btn-font'>Ortolans</div>
@@ -85,7 +108,7 @@
     
     
     <!--<h2>Section du swagg</h2> -->
-    <div class='col-sm-4'>
+    <div id='swagg-0' class='col-sm-4 post swagg'>
       <h3 class='sec-title'>Définition du swag</h3>
       <button type='button' class='btn btn-primary btn-sm'>
         <div class='btn-font'>LOUR SWAGG</div>
@@ -107,14 +130,9 @@
       </p>
       <img src='images/swag.jpg' alt='swagg' class='img-thumbnail d-block'>
     </div>
-  </div>
-  <hr>
-</div>
-
-<!-- DAVID CAGE -->
-<div class='container'>
-  <div class='row'>
-    <div class ='col-sm-4'>
+    
+    <!-- DAVID CAGE -->
+    <div id='swagg-0' class ='col-sm-4 post swagg'>
       <h3 class='sec-title'>Exemple de swagg</h3>
       <button type='button' class='btn btn-primary btn-sm'>
         <div class='btn-font'>LOUR SWAGG</div>
@@ -141,7 +159,7 @@
     </div>
     
     <!-- JEAN LUC REICHMANN-->
-    <div class='col-sm-4'>
+    <div id='jeanluc-0' class='col-sm-4 post jl'>
       <h3 class='sec-title'>Jean luc Reichmann</h3>
       <button type='button' class='btn btn-primary btn-sm'>
         <div class='btn-font'>Jean Luc Reichmann</div>
@@ -170,8 +188,8 @@
     </div>
     
     <!-- JEAN LUC REICHMANN 2-->
-    <div class='col-sm-4'> 
-      <h3 class='sec-title'>Le second poste sur Jean Luc</h3>
+    <div id='jeanluc-1' class='col-sm-4 post jl'> 
+      <h3 class='sec-title'>Blague à TEX</h3>
       <button type='button' class='btn btn-primary btn-sm'>
         <div class='btn-font'>Jean Luc Reichmann</div>
       </button>
@@ -182,14 +200,15 @@
         <div class='btn-font'>Paru le : 1/8/-1959</div>
       </button>
       <hr class='separator'>
-      <p>
-        En 2000, Hervé Hubert, producteur du Bigdil, lui propose de rejoindre
-        TF1 pour y animer la tranche du midi. Ensemble ils développent
-        Attention à la marche !. L'émission débute le 10 mars 2001, d'abord
-        le week-end puis toute la semaine dès septembre et ce 364 jours par
-        an à midi (le 14 juillet elle n'est pas diffusée en raison du défilé
-        de la Fête nationale).
-      </p>
+      <img src='images/tex.jpg' alt='TEX' class='img-thumbnail d-block center'>
+      <p>  C'est un explorateur qui rentre dans un bar en Afrique :</p>
+      <p>- *accent raciste* Alors monsieur qu-est ce que je vous sert ?</p>
+      <p>- Heu ... Vous allez me mettre un wisky dans un verre normal et un autre petit wisky dans un dé à coudre.</p>
+      <p>- *accent raciste* D'accord, subséquemment, je m'éxécute. OUI OUI OUI !</p>
+      <p>Le barman sert un verre de wisky et le gars sort de sa poche un ptit bonhomme de vingt centimètres de haut habillé en explorateur, qui boit son petit wiskt, ils trinquent tout les deux etc... </p>
+      <p>- *accent raciste* MAIS C'EST TOTALEMENT EXTRAORDINAIRE ! Mais qu'est ce qui vous est arrivé ?</p>
+      <p>- Bah ce qui est arrivé à mon pote, attendez on va lui demander ! Eh, c'est dans quel village que t'as traité le sorcier d'enfoiré ?</p>
+      <p>*rires*</p>
     </div>
   </div>
 </div>    

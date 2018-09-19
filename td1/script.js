@@ -1,16 +1,45 @@
-function hide ()
+function hide (id)
 {
-    console.log("Hello");
-    let elem = document.getElementById('accueil');
-    if (elem.style.display === 'none')
+    let elem = document.getElementById (id);
+    elem.style.display = 'none';
+}
+
+function show (id)
+{
+    let elem = document.getElementById (id);
+    elem.style.display = 'block';
+}
+
+function changeTitle (txt)
+{
+    document.getElementById('accueil').innerHTML = txt;
+}
+
+function hideList (ids)
+{
+    for (let i = 0; i < ids.length; ++i)
+        hide(ids[i]);
+}
+
+function showList (ids)
+{
+    for (let i = 0; i < ids.length; ++i)
+        show (ids[i]);
+}
+
+function hideClassList (ids)
+{
+    for (let i = 0; i < ids.length; ++i)
     {
-        elem.style.display = 'block';
-    }
-    else
-    {
-        elem.style.display = 'none';
+        let list = document.getElementsByClassName(ids[i]);
+        for (let j = 0; j < list.length; ++j)
+            list[j].style.display = 'none';
     }
 }
 
-const btn = document.getElementById ('accueil-btn');
-btn.addEventListener('click', hide);
+function showAllPosts ()
+{
+    let list = document.getElementsByClassName('post');
+    for (let i = 0; i < list.length; ++i)
+        list[i].style.display = 'block';
+}
