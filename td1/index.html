@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang='fr'>
 <head>
@@ -11,41 +11,37 @@
 </head>
 
 <!-- NAVBAR -->
-<div class='container'>
-  <nav class='navbar'>
-    <a class='navbar-brand' id='blog-title'>Blog du SWAGG</a>
+<nav class='navbar navbar-fixed-top navbar-inverse'>  
+  <div class='container-fluid'> 
+    <div class='navbar-header'>
+      <a class='navbar-brand' id='blog-title'>Blog du SWAGG</a>
+    </div>
     <form class='form-inline my-2 my-lg-0'>
       
       <!-- BTN ACCUEIL -->
-      <button class='btn btn-primary' 
-      onclick="showAllPosts(); changeTitle ('Accueil'); return false;">
-      Accueil
-    </button>
-    
-    <!-- BTN ORTOLANS -->
-    <button class='btn btn-link'
-    onclick="
-    showAllPosts();
-    hideClassList(['swagg', 'jl']);
-    changeTitle('Les Ortolans'); return false;">Les Ortolans</button>
-    
-    <!-- BTN SWAGG -->
-    <button class='btn btn-link'
-    onclick="
-    showAllPosts();
-    hideClassList (['ortolan', 'jl']);
-    changeTitle('LOUR SWAGG'); return false;">LOUR SWAGG</button>
-    
-    <!-- BTN JEAN LUC REICHMANN -->
-    <button class='btn btn-link'
-    onclick="
-    showAllPosts();
-    hideClassList(['ortolan', 'swagg']);
-    changeTitle('Jean Luc Reichmann'); return false;">Jean Luc Reichmann</button>
-  </form>
+      <button id='btn-accueil' class='btn btn-primary'>Accueil</button>
+      
+      <!-- BTN ORTOLANS -->
+      <button id='btn-ortolan' class='btn btn-link'>Les Ortolans</button>
+      
+      <!-- BTN SWAGG -->
+      <button class='btn btn-link'
+      onclick="
+      showAllPosts();
+      hideClassList (['ortolan', 'jl']);
+      changeTitle('LOUR SWAGG'); return false;">LOUR SWAGG</button>
+      
+      <!-- BTN JEAN LUC REICHMANN -->
+      <button class='btn btn-link'
+      onclick="
+      showAllPosts();
+      hideClassList(['ortolan', 'swagg']);
+      changeTitle('Jean Luc Reichmann'); return false;">Jean Luc Reichmann</button>
+    </form>
+  </div>
 </nav>
+
 <hr class='separator'>
-</div>
 
 <div class='container'>
   <div id='accueil' class='jumbotron text-center'>
@@ -57,16 +53,11 @@
   <div class='row'>
     
     <!-- LES ORTOLANS -->
-    <div id='ortolans-0' class='col-sm-4 post ortolan'>
+    <div class='col-sm-4 post ortolan'>
       <h3 class='sec-title'>Les Ortolans</h3>
-      <button type="button" class="btn btn-primary btn-sm">
-        <div class="btn-font">Ortolans</div>
-      </button>
-      <button type='button' class='btn btn-info btn-sm'>
-        <div class='btn-font'>Jacky Laffrite</div>
-      </button>
-      <button type='button' class='btn btn-danger btn-sm'>
-        <div class='btn-font'>Paru le : 6/9/1969</div>
+      <button type='button' class="btn btn-primary btn-sm btn-font">Ortolans</button>
+      <button type='button' class='btn btn-info btn-sm btn-font'>Jacky Laffrite</button>
+      <button type='button' class='btn btn-danger btn-sm btn-font'>Paru le : 6/9/1969
       </button>
       <hr class='separator'>
       <p>
@@ -80,16 +71,11 @@
     </div>
     
     
-    <div id='ortolans-1' class='col-sm-4 post ortolan'>
+    <div class='col-sm-4 post ortolan'>
       <h3 class='sec-title'>Et on lui suce le derière</h3>
-      <button type='button' class='btn btn-primary btn-sm'>
-        <div class='btn-font'>Ortolans</div>
-      </button>
-      <button type='button' class='btn btn-info btn-sm'>
-        <div class='btn-font'>Jacky Laff</div>
-      </button>
-      <button type='button' class='btn btn-danger btn-sm'>
-        <div class='btn-font'>Paru le : 4/9/1002</div>
+      <button type='button' class='btn btn-primary btn-sm btn-font'>Ortolans</button>
+      <button type='button' class='btn btn-info btn-sm btn-font'>Jacky Laff</button>
+      <button type='button' class='btn btn-danger btn-sm btn-font'>Paru le : 4/9/1002
       </button>
       <hr class='separator'>
       <p>
@@ -108,16 +94,11 @@
     
     
     <!--<h2>Section du swagg</h2> -->
-    <div id='swagg-0' class='col-sm-4 post swagg'>
+    <div class='col-sm-4 post swagg'>
       <h3 class='sec-title'>Définition du swag</h3>
-      <button type='button' class='btn btn-primary btn-sm'>
-        <div class='btn-font'>LOUR SWAGG</div>
-      </button>
-      <button type='button' class='btn btn-info btn-sm'>
-        <div class='btn-font'>Bob Morray</div>
-      </button>
-      <button type='button' class='btn btn-danger btn-sm'>
-        <div class='btn-font'>Paru le : 31/10/6969</div>
+      <button type='button' class='btn btn-primary btn-sm btn-font'>LOUR SWAGG</button>
+      <button type='button' class='btn btn-info btn-sm btn-font'>Bob Morray</button>
+      <button type='button' class='btn btn-danger btn-sm btn-font'>Paru le : 31/10/6969
       </button>
       <hr class='separator'>
       <p>
@@ -130,18 +111,15 @@
       </p>
       <img src='images/swag.jpg' alt='swagg' class='img-thumbnail d-block'>
     </div>
-    
+  </div>
+  
+  <div class='container'>
     <!-- DAVID CAGE -->
-    <div id='swagg-0' class ='col-sm-4 post swagg'>
+    <div class ='col-sm-4 post swagg'>
       <h3 class='sec-title'>Exemple de swagg</h3>
-      <button type='button' class='btn btn-primary btn-sm'>
-        <div class='btn-font'>LOUR SWAGG</div>
-      </button>
-      <button type='button' class='btn btn-info btn-sm'>
-        <div class='btn-font'>David Pujadas</div>
-      </button>
-      <button type='button' class='btn btn-danger btn-sm'>
-        <div class='btn-font'>Paru le : 3/3/1333</div>
+      <button type='button' class='btn btn-primary btn-sm btn-font'>LOUR SWAGG</button>
+      <button type='button' class='btn btn-info btn-sm btn-font'>David Pujadas</button>
+      <button type='button' class='btn btn-danger btn-sm btn-font'>Paru le : 3/3/1333
       </button>
       <hr class='separator'>
       <p>
@@ -159,16 +137,12 @@
     </div>
     
     <!-- JEAN LUC REICHMANN-->
-    <div id='jeanluc-0' class='col-sm-4 post jl'>
+    <div class='col-sm-4 post jl'>
       <h3 class='sec-title'>Jean luc Reichmann</h3>
-      <button type='button' class='btn btn-primary btn-sm'>
-        <div class='btn-font'>Jean Luc Reichmann</div>
+      <button type='button' class='btn btn-primary btn-sm btn-font'>Jean Luc Reichmann
       </button>
-      <button type='button' class='btn btn-info btn-sm'>
-        <div class='btn-font'>Pierre Grenier</div>
-      </button>
-      <button type='button' class='btn btn-danger btn-sm'>
-        <div class='btn-font'>Paru le : 7/6/9993</div>
+      <button type='button' class='btn btn-info btn-sm btn-font'>Pierre Grenier</button>
+      <button type='button' class='btn btn-danger btn-sm btn-font'>Paru le : 7/6/9993
       </button>
       <hr class='separator'>
       <p>
@@ -188,16 +162,12 @@
     </div>
     
     <!-- JEAN LUC REICHMANN 2-->
-    <div id='jeanluc-1' class='col-sm-4 post jl'> 
+    <div class='col-sm-4 post jl'> 
       <h3 class='sec-title'>Blague à TEX</h3>
-      <button type='button' class='btn btn-primary btn-sm'>
-        <div class='btn-font'>Jean Luc Reichmann</div>
+      <button type='button' class='btn btn-primary btn-sm btn-font'>Jean Luc Reichmann
       </button>
-      <button type='button' class='btn btn-info btn-sm'>
-        <div class='btn-font'>D.VA</div>
-      </button>
-      <button type='button' class='btn btn-danger btn-sm'>
-        <div class='btn-font'>Paru le : 1/8/-1959</div>
+      <button type='button' class='btn btn-info btn-sm btn-font'>D.VA</button>
+      <button type='button' class='btn btn-danger btn-sm btn-font'>Paru le : 1/8/-1959
       </button>
       <hr class='separator'>
       <img src='images/tex.jpg' alt='TEX' class='img-thumbnail d-block center'>
@@ -211,6 +181,6 @@
       <p>*rires*</p>
     </div>
   </div>
-</div>    
+</div>
 </body>
 </html>

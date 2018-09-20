@@ -43,3 +43,25 @@ function showAllPosts ()
     for (let i = 0; i < list.length; ++i)
         list[i].style.display = 'block';
 }
+
+function dispReception ()
+{
+    showAllPosts();
+    changeTitle("Accueil");
+}
+
+function changeSection (list, title)
+{
+    showAllPosts();
+    hideClassList(list);
+    changeTitle(title);
+}
+
+const btnAccueil = document.getElementById("btn-accueil");
+btnAccueil.addEventListener("click", dispReception, false);
+
+const btnOrtolan = document.getElementById("btn-ortolan");
+btnOrtolan.addEventListener("click",function ()
+{
+    changeSection (['swagg', 'jl'], "Les Ortolans");
+},false);
