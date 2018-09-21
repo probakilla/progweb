@@ -10,177 +10,178 @@
   <title> Blog TD1 </title>
 </head>
 
-<!-- NAVBAR -->
-<nav class='navbar navbar-fixed-top navbar-inverse'>  
-  <div class='container-fluid'> 
-    <div class='navbar-header'>
-      <a class='navbar-brand' id='blog-title'>Blog du SWAGG</a>
+<body>
+  <!-- NAVBAR -->
+  <nav class='navbar navbar-fixed-top navbar-inverse'>  
+    <div class='container-fluid'> 
+      <div class='navbar-header'>
+        <a class='navbar-brand' id='blog-title'>Blog du SWAGG</a>
+      </div>
+      <form class='form-inline my-2 my-lg-0'>
+        
+        <!-- BTN ACCUEIL -->
+        <button id='btn-accueil' class='btn btn-primary'>Accueil</button>
+        
+        <!-- BTN ORTOLANS -->
+        <button id='btn-ortolan' class='btn btn-link'>Les Ortolans</button>
+        
+        <!-- BTN SWAGG -->
+        <button class='btn btn-link'
+        onclick="
+        showAllPosts();
+        hideClassList (['ortolan', 'jl']);
+        changeTitle('LOUR SWAGG'); return false;">LOUR SWAGG</button>
+        
+        <!-- BTN JEAN LUC REICHMANN -->
+        <button class='btn btn-link'
+        onclick="
+        showAllPosts();
+        hideClassList(['ortolan', 'swagg']);
+        changeTitle('Jean Luc Reichmann'); return false;">Jean Luc Reichmann</button>
+      </form>
     </div>
-    <form class='form-inline my-2 my-lg-0'>
-      
-      <!-- BTN ACCUEIL -->
-      <button id='btn-accueil' class='btn btn-primary'>Accueil</button>
-      
-      <!-- BTN ORTOLANS -->
-      <button id='btn-ortolan' class='btn btn-link'>Les Ortolans</button>
-      
-      <!-- BTN SWAGG -->
-      <button class='btn btn-link'
-      onclick="
-      showAllPosts();
-      hideClassList (['ortolan', 'jl']);
-      changeTitle('LOUR SWAGG'); return false;">LOUR SWAGG</button>
-      
-      <!-- BTN JEAN LUC REICHMANN -->
-      <button class='btn btn-link'
-      onclick="
-      showAllPosts();
-      hideClassList(['ortolan', 'swagg']);
-      changeTitle('Jean Luc Reichmann'); return false;">Jean Luc Reichmann</button>
-    </form>
-  </div>
-</nav>
-
-<hr class='separator'>
-
-<div class='container'>
-  <div id='accueil' class='jumbotron text-center'>
-    Accueil
-  </div>
-</div>
-
-<div class='container'>
-  <div class='row'>
-    
-    <!-- LES ORTOLANS -->
-    <div class='col-sm-4 post ortolan'>
-      <h3 class='sec-title'>Les Ortolans</h3>
-      <button type='button' class="btn btn-primary btn-sm btn-font">Ortolans</button>
-      <button type='button' class='btn btn-info btn-sm btn-font'>Jacky Laffrite</button>
-      <button type='button' class='btn btn-danger btn-sm btn-font'>Paru le : 6/9/1969
-      </button>
-      <hr class='separator'>
-      <p>
-        C'est un petit oiseau chanteur, mesurant de 16 à 16,5 centimètres de
-        longueur, pour une envergure comprise entre 24 et 27 centimètres et une
-      </p>
-      <p>
-        masse allant de 19 à 27 grammes3. Le mâle a le dessous du corps rosâtre, la poitrine et la tête verdâtre, la gorge jaune, le dos brun-roux rayé de noir, les ailes brun-noir liserées de roux et coupées transversalement de deux fines barres blanches, le bec rose à marron clair et les pattes roses à brun jaune. Un cercle orbital jaune entoure chaque œil marron foncé.
-      </p>
-      <img src='images/ortolan.jpg' class='img-thumbnail d-block' alt='ortolan swagg'>
-    </div>
-    
-    
-    <div class='col-sm-4 post ortolan'>
-      <h3 class='sec-title'>Et on lui suce le derière</h3>
-      <button type='button' class='btn btn-primary btn-sm btn-font'>Ortolans</button>
-      <button type='button' class='btn btn-info btn-sm btn-font'>Jacky Laff</button>
-      <button type='button' class='btn btn-danger btn-sm btn-font'>Paru le : 4/9/1002
-      </button>
-      <hr class='separator'>
-      <p>
-        L'espèce est en diminution dans au moins dix pays d'Europe. On estime
-        la population totale à 400 000 / 600 000 couples. En France, il a
-        disparu de 17 départements entre 1960 et 1990 et diminué dans 7
-        autres départements. En 1992, la population française d'ortolans
-        était estimée à 15 000 couples. Elle est certainement nettement moins
-        nombreuse aujourd'hui puisque l'espèce a disparu de nombreuses régions
-        où elle était autrefois présente5.
-      </p>
-      <p>
-        The birds are caught with nets set during their autumn migratory flight to Africa. They are then kept in covered cages or boxes. The birds react to the dark cage by gorging themselves on grain, usually millet seed, until they double their bulk. Roman Emperors stabbed out ortolans’ eyes in order to make the birds think it was night, making them eat even more. The birds are then thrown into a container of Armagnac which both drowns and marinates the birds.[7]
-      </p>
-    </div>
-    
-    
-    <!--<h2>Section du swagg</h2> -->
-    <div class='col-sm-4 post swagg'>
-      <h3 class='sec-title'>Définition du swag</h3>
-      <button type='button' class='btn btn-primary btn-sm btn-font'>LOUR SWAGG</button>
-      <button type='button' class='btn btn-info btn-sm btn-font'>Bob Morray</button>
-      <button type='button' class='btn btn-danger btn-sm btn-font'>Paru le : 31/10/6969
-      </button>
-      <hr class='separator'>
-      <p>
-        Couramment employé par les jeunes et les rappeurs de nos jours,
-        le mot swag a pourtant une origine bien plus lointaine. Il
-        dériverait de l'anglais to swagger employé dès le XVIe par
-        Shakespeare et signifiant fanfaronner. Car le swag n'est pas
-        qu'une question de vêtements, il se rapporte aussi à l'attitude
-        et à l'allure.
-      </p>
-      <img src='images/swag.jpg' alt='swagg' class='img-thumbnail d-block'>
+  </nav>
+  
+  <hr class='separator'>
+  
+  <div class='container'>
+    <div id='accueil' class='jumbotron text-center'>
+      Accueil
     </div>
   </div>
   
   <div class='container'>
-    <!-- DAVID CAGE -->
-    <div class ='col-sm-4 post swagg'>
-      <h3 class='sec-title'>Exemple de swagg</h3>
-      <button type='button' class='btn btn-primary btn-sm btn-font'>LOUR SWAGG</button>
-      <button type='button' class='btn btn-info btn-sm btn-font'>David Pujadas</button>
-      <button type='button' class='btn btn-danger btn-sm btn-font'>Paru le : 3/3/1333
-      </button>
-      <hr class='separator'>
-      <p>
-        David Cage défend un jeu vidéo tourné vers l'émotion et proposant
-        une mise en scène proche du cinéma1. En octobre 2017, le magazine
-        L'Express le surnomme le « Godard du pixel »1.
-      </p>
-      <p>
-        Néanmoins, une partie de la presse spécialisée le critique très
-        sévèrement, estimant qu'il est un mauvais scénariste2,3,4,5 et
-        que ses productions délaissent l'interactivité au profit des
-        cinématiques - ce qui en ferait de mauvais jeux vidéo6,7.
-      </p>
-      <img src='images/david_cage.jpeg' alt='david cage' class='img-thumbnail d-block'>
+    <div class='row'>
+      
+      <!-- LES ORTOLANS -->
+      <div class='col-sm-4 post ortolan'>
+        <h3 class='sec-title'>Les Ortolans</h3>
+        <button type='button' class="btn btn-primary btn-sm btn-font">Ortolans</button>
+        <button type='button' class='btn btn-info btn-sm btn-font'>Jacky Laffrite</button>
+        <button type='button' class='btn btn-danger btn-sm btn-font'>Paru le : 6/9/1969
+        </button>
+        <hr class='separator'>
+        <p>
+          C'est un petit oiseau chanteur, mesurant de 16 à 16,5 centimètres de
+          longueur, pour une envergure comprise entre 24 et 27 centimètres et une
+        </p>
+        <p>
+          masse allant de 19 à 27 grammes3. Le mâle a le dessous du corps rosâtre, la poitrine et la tête verdâtre, la gorge jaune, le dos brun-roux rayé de noir, les ailes brun-noir liserées de roux et coupées transversalement de deux fines barres blanches, le bec rose à marron clair et les pattes roses à brun jaune. Un cercle orbital jaune entoure chaque œil marron foncé.
+        </p>
+        <img src='images/ortolan.jpg' class='img-thumbnail d-block' alt='ortolan swagg'>
+      </div>
+      
+      
+      <div class='col-sm-4 post ortolan'>
+        <h3 class='sec-title'>Et on lui suce le derière</h3>
+        <button type='button' class='btn btn-primary btn-sm btn-font'>Ortolans</button>
+        <button type='button' class='btn btn-info btn-sm btn-font'>Jacky Laff</button>
+        <button type='button' class='btn btn-danger btn-sm btn-font'>Paru le : 4/9/1002
+        </button>
+        <hr class='separator'>
+        <p>
+          L'espèce est en diminution dans au moins dix pays d'Europe. On estime
+          la population totale à 400 000 / 600 000 couples. En France, il a
+          disparu de 17 départements entre 1960 et 1990 et diminué dans 7
+          autres départements. En 1992, la population française d'ortolans
+          était estimée à 15 000 couples. Elle est certainement nettement moins
+          nombreuse aujourd'hui puisque l'espèce a disparu de nombreuses régions
+          où elle était autrefois présente5.
+        </p>
+        <p>
+          The birds are caught with nets set during their autumn migratory flight to Africa. They are then kept in covered cages or boxes. The birds react to the dark cage by gorging themselves on grain, usually millet seed, until they double their bulk. Roman Emperors stabbed out ortolans’ eyes in order to make the birds think it was night, making them eat even more. The birds are then thrown into a container of Armagnac which both drowns and marinates the birds.[7]
+        </p>
+      </div>
+      
+      
+      <!--<h2>Section du swagg</h2> -->
+      <div class='col-sm-4 post swagg'>
+        <h3 class='sec-title'>Définition du swag</h3>
+        <button type='button' class='btn btn-primary btn-sm btn-font'>LOUR SWAGG</button>
+        <button type='button' class='btn btn-info btn-sm btn-font'>Bob Morray</button>
+        <button type='button' class='btn btn-danger btn-sm btn-font'>Paru le : 31/10/6969
+        </button>
+        <hr class='separator'>
+        <p>
+          Couramment employé par les jeunes et les rappeurs de nos jours,
+          le mot swag a pourtant une origine bien plus lointaine. Il
+          dériverait de l'anglais to swagger employé dès le XVIe par
+          Shakespeare et signifiant fanfaronner. Car le swag n'est pas
+          qu'une question de vêtements, il se rapporte aussi à l'attitude
+          et à l'allure.
+        </p>
+        <img src='images/swag.jpg' alt='swagg' class='img-thumbnail d-block'>
+      </div>
     </div>
     
-    <!-- JEAN LUC REICHMANN-->
-    <div class='col-sm-4 post jl'>
-      <h3 class='sec-title'>Jean luc Reichmann</h3>
-      <button type='button' class='btn btn-primary btn-sm btn-font'>Jean Luc Reichmann
-      </button>
-      <button type='button' class='btn btn-info btn-sm btn-font'>Pierre Grenier</button>
-      <button type='button' class='btn btn-danger btn-sm btn-font'>Paru le : 7/6/9993
-      </button>
-      <hr class='separator'>
-      <p>
-        Son grand-père (de religion juive) a dû s'expatrier de Slovaquie pour
-        échapper au nazisme. Il a alors trouvé refuge en France4.
-      </p>
-      <p>
-        Il a comme marque de naissance une tache de vin sur le nez. Dans son
-        enfance, sa mère tente en vain de la lui retirer à coup de séances
-        de laser à l'hôpital. Lorsqu'il anime Les Z'amours, il masque cet
-        angiome derrière du fond de teint, puis décide de l'assumer et de
-        le montrer5.
-        Son père, Pierre Reichmann, était directeur d'un supermarché de
-        l'enseigne Mammouth à Toulouse6 (« Mammouth Gramont » qui fut remplacé
-      </p>
-      <img src='images/jl.jpg' alt='david cage' class='img-thumbnail d-block'>
-    </div>
-    
-    <!-- JEAN LUC REICHMANN 2-->
-    <div class='col-sm-4 post jl'> 
-      <h3 class='sec-title'>Blague à TEX</h3>
-      <button type='button' class='btn btn-primary btn-sm btn-font'>Jean Luc Reichmann
-      </button>
-      <button type='button' class='btn btn-info btn-sm btn-font'>D.VA</button>
-      <button type='button' class='btn btn-danger btn-sm btn-font'>Paru le : 1/8/-1959
-      </button>
-      <hr class='separator'>
-      <img src='images/tex.jpg' alt='TEX' class='img-thumbnail d-block center'>
-      <p>  C'est un explorateur qui rentre dans un bar en Afrique :</p>
-      <p>- *accent raciste* Alors monsieur qu-est ce que je vous sert ?</p>
-      <p>- Heu ... Vous allez me mettre un wisky dans un verre normal et un autre petit wisky dans un dé à coudre.</p>
-      <p>- *accent raciste* D'accord, subséquemment, je m'éxécute. OUI OUI OUI !</p>
-      <p>Le barman sert un verre de wisky et le gars sort de sa poche un ptit bonhomme de vingt centimètres de haut habillé en explorateur, qui boit son petit wiskt, ils trinquent tout les deux etc... </p>
-      <p>- *accent raciste* MAIS C'EST TOTALEMENT EXTRAORDINAIRE ! Mais qu'est ce qui vous est arrivé ?</p>
-      <p>- Bah ce qui est arrivé à mon pote, attendez on va lui demander ! Eh, c'est dans quel village que t'as traité le sorcier d'enfoiré ?</p>
-      <p>*rires*</p>
+    <div class='container'>
+      <!-- DAVID CAGE -->
+      <div class ='col-sm-4 post swagg'>
+        <h3 class='sec-title'>Exemple de swagg</h3>
+        <button type='button' class='btn btn-primary btn-sm btn-font'>LOUR SWAGG</button>
+        <button type='button' class='btn btn-info btn-sm btn-font'>David Pujadas</button>
+        <button type='button' class='btn btn-danger btn-sm btn-font'>Paru le : 3/3/1333
+        </button>
+        <hr class='separator'>
+        <p>
+          David Cage défend un jeu vidéo tourné vers l'émotion et proposant
+          une mise en scène proche du cinéma1. En octobre 2017, le magazine
+          L'Express le surnomme le « Godard du pixel »1.
+        </p>
+        <p>
+          Néanmoins, une partie de la presse spécialisée le critique très
+          sévèrement, estimant qu'il est un mauvais scénariste2,3,4,5 et
+          que ses productions délaissent l'interactivité au profit des
+          cinématiques - ce qui en ferait de mauvais jeux vidéo6,7.
+        </p>
+        <img src='images/david_cage.jpeg' alt='david cage' class='img-thumbnail d-block'>
+      </div>
+      
+      <!-- JEAN LUC REICHMANN-->
+      <div class='col-sm-4 post jl'>
+        <h3 class='sec-title'>Jean luc Reichmann</h3>
+        <button type='button' class='btn btn-primary btn-sm btn-font'>Jean Luc Reichmann
+        </button>
+        <button type='button' class='btn btn-info btn-sm btn-font'>Pierre Grenier</button>
+        <button type='button' class='btn btn-danger btn-sm btn-font'>Paru le : 7/6/9993
+        </button>
+        <hr class='separator'>
+        <p>
+          Son grand-père (de religion juive) a dû s'expatrier de Slovaquie pour
+          échapper au nazisme. Il a alors trouvé refuge en France4.
+        </p>
+        <p>
+          Il a comme marque de naissance une tache de vin sur le nez. Dans son
+          enfance, sa mère tente en vain de la lui retirer à coup de séances
+          de laser à l'hôpital. Lorsqu'il anime Les Z'amours, il masque cet
+          angiome derrière du fond de teint, puis décide de l'assumer et de
+          le montrer5.
+          Son père, Pierre Reichmann, était directeur d'un supermarché de
+          l'enseigne Mammouth à Toulouse6 (« Mammouth Gramont » qui fut remplacé
+        </p>
+        <img src='images/jl.jpg' alt='david cage' class='img-thumbnail d-block'>
+      </div>
+      
+      <!-- JEAN LUC REICHMANN 2-->
+      <div class='col-sm-4 post jl'> 
+        <h3 class='sec-title'>Blague à TEX</h3>
+        <button type='button' class='btn btn-primary btn-sm btn-font'>Jean Luc Reichmann
+        </button>
+        <button type='button' class='btn btn-info btn-sm btn-font'>D.VA</button>
+        <button type='button' class='btn btn-danger btn-sm btn-font'>Paru le : 1/8/-1959
+        </button>
+        <hr class='separator'>
+        <img src='images/tex.jpg' alt='TEX' class='img-thumbnail d-block center'>
+        <p>  C'est un explorateur qui rentre dans un bar en Afrique :</p>
+        <p>- *accent raciste* Alors monsieur qu-est ce que je vous sert ?</p>
+        <p>- Heu ... Vous allez me mettre un wisky dans un verre normal et un autre petit wisky dans un dé à coudre.</p>
+        <p>- *accent raciste* D'accord, subséquemment, je m'éxécute. OUI OUI OUI !</p>
+        <p>Le barman sert un verre de wisky et le gars sort de sa poche un ptit bonhomme de vingt centimètres de haut habillé en explorateur, qui boit son petit wiskt, ils trinquent tout les deux etc... </p>
+        <p>- *accent raciste* MAIS C'EST TOTALEMENT EXTRAORDINAIRE ! Mais qu'est ce qui vous est arrivé ?</p>
+        <p>- Bah ce qui est arrivé à mon pote, attendez on va lui demander ! Eh, c'est dans quel village que t'as traité le sorcier d'enfoiré ?</p>
+        <p>*rires*</p>
+      </div>
     </div>
   </div>
-</div>
 </body>
 </html>
