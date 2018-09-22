@@ -57,11 +57,9 @@ function changeSection (list, title)
     changeTitle(title);
 }
 
-const btnAccueil = document.getElementById("btn-accueil");
-btnAccueil.addEventListener("click", dispReception, false);
+document.getElementById("btn-accueil").addEventListener("click", dispReception, false);
 
-const btnOrtolan = document.getElementById("btn-ortolan");
-btnOrtolan.addEventListener("click",function ()
+document.getElementById("btn-ortolan").addEventListener("click",function ()
 {
     changeSection (['swagg', 'jl'], "Les Ortolans");
-},false);
+});
